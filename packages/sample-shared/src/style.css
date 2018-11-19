@@ -1,0 +1,153 @@
+:root {
+    --desktop-window: "960px";
+    --android-window: "800px";
+    --ipad-window: "768px";
+    --kindle-window: "600px";
+    --narrow-window: "540px";
+    --iphone4-window: "480px";
+    --iphone3-window: "320px";
+
+    --rgb-dark-grey: #333333;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+    boder: 5px solid red;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--rgb-dark-grey);
+    font-weight: 500;
+    line-height: 1.1;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+a:hover, a:focus {
+    /* color: $rgb-primary-dark; */
+}
+.row {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2%;
+}
+section {
+    padding: 2em 0;
+    box-sizing: border-box;
+}
+.module {
+    margin: 3em 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.module-footer,
+.module-header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.module:after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.main_header .row .content {
+    padding: 0;
+}
+.dark {
+    /* background: $rgb-grey-dark; */
+}
+@media screen and (max-width: var(--ipad-window)) {
+    .container {
+        width: 95%;
+    }
+}
+@media screen and (max-width: var(--narrow-window)) {
+    .container {
+        width: 95%;
+    }
+}
+/*
+  ------------------------------------------------------------
+*/
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: $rgb-background; */
+    /* color: $rgb-color; */
+    /* change if the mask should have another color then white */
+    z-index: 99;
+    /* makes sure it stays on top */
+}
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    /*todo background-image: url("showcase/img/preloader.gif");*/
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
+}
+/*
+  ------------------------------------------------------------
+  Scroll Up
+  ------------------------------------------------------------
+*/
+#toTop {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 51px;
+    height: 51px;
+    border: none;
+    text-indent: 100%;
+    /*todo background: url("showcase/img/ui.totop.png") no-repeat left top;*/
+}
+#toTopHover {
+    /*todo background: url("showcase/img/ui.totop.png") no-repeat left -51px;*/
+    width: 51px;
+    height: 51px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+}
+#toTop:active,
+#toTop:focus {
+    outline: none;
+}

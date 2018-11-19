@@ -1,0 +1,27 @@
+{
+  "name": "@roybailey/sample-shared",
+  "description": "Shared components",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll",
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies" : {
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "@roybailey/typescript-config": "^0.1.0",
+    "@roybailey/jest-preset": "^0.1.0",
+    "@roybailey/storybook-utils": "^0.1.0"
+  },
+  "jest": {
+    "displayName": "sample-shared",
+    "preset": "@roybailey/jest-preset/react"
+  }
+}

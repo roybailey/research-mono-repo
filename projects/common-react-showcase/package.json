@@ -1,0 +1,30 @@
+{
+  "name": "common-react-showcase",
+  "description": "create-react-app typescript",
+  "version": "0.1.0",
+  "scripts": {
+    "cra:start": "react-scripts start",
+    "cra:build": "react-scripts build",
+    "cra:test": "react-scripts test",
+    "cra:eject": "react-scripts eject",
+    "start": "cross-env NODE_ENV=development node ./node_modules/@roybailey/dev-server --config webpack/webpack.dev.babel.js --proxyPort 8008"
+  },
+  "devDependencies": {
+    "react-scripts": "2.1.1",
+    "@roybailey/typescript-config": "^0.1.0",
+    "@roybailey/jest-preset": "^0.1.0",
+    "@roybailey/dev-server": "^0.1.0",
+    "@roybailey/storybook-utils": "^0.1.0",
+    "eventsource-polyfill": "0.9.6",
+    "html-loader": "0.5.5"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

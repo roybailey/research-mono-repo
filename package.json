@@ -1,0 +1,74 @@
+{
+  "name": "research-mono-repo",
+  "private": true,
+  "scripts": {
+    "lerna:purge": "lerna clean --yes && rimraf node_modules && yarn",
+    "test": "jest --ci --reporters=default --reporters=jest-junit",
+    "checktypes": "lerna run --stream checktypes --scope=@roybailey/*",
+    "storybook": "lerna run storybook --scope=@roybailey/storybook --stream"
+  },
+  "devDependencies": {
+    "@roybailey/jest-preset": "*",
+    "@roybailey/typescript-config": "*",
+    "@types/react": "^16.5.2",
+    "@types/react-dom": "^16.0.9",
+    "jest": "^23.6.0",
+    "jest-junit": "^5.2.0",
+    "lerna": "^3.4.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.5",
+    "rimraf": "^2.6.2",
+    "semver": "^5.5.0",
+    "cross-env": "5.2.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-loader": "8.0.4",
+    "babel-plugin-dynamic-import-node": "1.2.0",
+    "babel-plugin-react-transform": "3.0.0",
+    "babel-plugin-styled-components": "1.5.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "babel-plugin-transform-react-constant-elements": "6.23.0",
+    "babel-plugin-transform-react-inline-elements": "6.22.0",
+    "babel-plugin-transform-react-jsx-source": "6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.13",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "babel-jest": "^23.6.0"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "engines": {
+    "node": ">=10.5.0",
+    "npm": ">=6.1.0"
+  },
+  "workspaces": {
+    "packages": [
+      "projects/*",
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/@roybailey/typescript-config",
+      "**/@roybailey/dev-dll-packager",
+      "**/@roybailey/dev-server",
+      "**/@roybailey/jest-preset",
+      "**/@types/hoist-non-react-statics",
+      "**/hoist-non-react-statics"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "Research Mono Repo",
+    "outputDirectory": "reports",
+    "outputName": "./junit.xml",
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "ancestor-separator": " > ",
+    "usePathForSuiteName": "true"
+  },
+  "lint-staged": {
+    "*.{*.ts,tsx}": "npm run lint",
+    "*.json": "prettier"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "extends": "./node_modules/@roybailey/typescript-config/tsconfig/index.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": "src",
+    "strictFunctionTypes": false // Due to https://github.com/piotrwitek/typesafe-actions/issues/44
+  },
+  "exclude": [
+    "docs",
+    "internals",
+    "node_modules",
+    "tsDist",
+    "dist",
+    "server",
+    "coverage",
+
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest"
+  ]
+}

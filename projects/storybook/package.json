@@ -1,0 +1,23 @@
+{
+  "name": "@roybailey/storybook",
+  "version": "0.1.0",
+  "description": "Storybook for React",
+  "engines": {
+    "node": ">=10.5.0",
+    "npm": ">=6.1.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9003 -c .storybook"
+  },
+  "dependencies": {
+    "@roybailey/typescript-config": "^0.1.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@roybailey/sample-shared": "^0.1.0",
+    "@roybailey/storybook-utils": "^0.1.0",
+    "babel-loader": "^7.1.4",
+    "ts-loader": "^5.3.0"
+  }
+}

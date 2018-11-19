@@ -1,0 +1,7 @@
+{
+  "extends": "./node_modules/@roybailey/typescript-config/tsconfig/index.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowJs": true
+  }
+}

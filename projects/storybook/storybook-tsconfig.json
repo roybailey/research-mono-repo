@@ -1,0 +1,25 @@
+{
+  "extends": "./node_modules/@roybailey/typescript-config/tsconfig/index.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "strict": false,
+    "lib": ["esnext", "dom"],
+    "rootDir": "./",
+    "baseUrl": "./",
+    "strictFunctionTypes": false
+  },
+  "include": ["../../../**/*"],
+  "exclude": [
+    "docs",
+    "internals",
+    "node_modules",
+    "tsDist",
+    "dist",
+    "server",
+    "coverage",
+
+    "projects",
+    "templates",
+    "dist-storybook"
+  ]
+}

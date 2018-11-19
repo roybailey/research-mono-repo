@@ -1,0 +1,24 @@
+{
+  "name": "sample-app",
+  "description": "Sample application using sample-shared",
+  "version": "0.1.0",
+  "scripts": {
+    "cra:start": "react-scripts-ts start",
+    "cra:build": "react-scripts-ts build",
+    "cra:test": "react-scripts-ts test --env=jsdom",
+    "cra:eject": "react-scripts-ts eject",
+    "start": "cross-env NODE_ENV=development node ./node_modules/@roybailey/dev-server --config webpack/webpack.dev.babel.js --proxyPort 8008"
+  },
+  "dependencies": {
+    "@roybailey/sample-shared": "^0.1.0"
+  },
+  "devDependencies": {
+    "react-scripts-ts": "2.15.1",
+    "@roybailey/typescript-config": "^0.1.0",
+    "@roybailey/jest-preset": "^0.1.0",
+    "@roybailey/dev-server": "^0.1.0",
+    "@roybailey/storybook-utils": "^0.1.0",
+    "eventsource-polyfill": "0.9.6",
+    "html-loader": "0.5.5"
+  }
+}

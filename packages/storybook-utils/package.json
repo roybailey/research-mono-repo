@@ -1,0 +1,31 @@
+{
+  "name": "@roybailey/storybook-utils",
+  "description": "Utilities for Storybook instances",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "sideEffects": false,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.7",
+    "@storybook/addon-info": "^4.0.7",
+    "@storybook/addon-knobs": "^4.0.7",
+    "@storybook/addon-links": "^4.0.7",
+    "@storybook/addon-options": "^4.0.7",
+    "@storybook/addon-viewport": "^4.0.7",
+    "@storybook/react": "^4.0.7",
+    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-info": "^3.4.2",
+    "@types/storybook__addon-knobs": "^3.4.1",
+    "@types/storybook__addon-links": "^3.3.2",
+    "@types/storybook__addon-options": "^3.2.2",
+    "@types/storybook__react": "^4.0.0",
+    "moment": "^2.22.2",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0"
+  },
+  "dependencies": {
+    "ramda": "^0.25.0"
+  }
+}
